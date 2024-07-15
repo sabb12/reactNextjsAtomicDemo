@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import ToDoTemplate from "../templates/ToDoTemplate";
 import TodoItem from "../molecules/ToDoItem";
+import "../styles/App.css";
 
 export default function ToDoPage() {
   const [newToDo, setNewToDo] = useState("");
   const [toDoitems, setToDoItems] = useState([]);
 
   const addToDo = () => {
-    setToDoItems([
-      ...toDoitems,
-      { id: Date.now(), text: newToDo, completed: false },
-    ]);
+    if (newToDo.trim()) {
+      setToDoItems([
+        ...toDoitems,
+        { id: Date.now(), text: newToDo, completed: false },
+      ]);
+      setNewToDo("");
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      addToDo();
+    }
   };
 
   const updateToDo = (id, text) => {
@@ -36,6 +46,7 @@ export default function ToDoPage() {
       newToDo={newToDo}
       setNewToDo={setNewToDo}
       addToDo={addToDo}
+      handleKeyPress={handleKeyPress}
       toDoItems={toDoitems}
       onUpdate={updateToDo}
       onDelete={deleteToDo}

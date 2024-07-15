@@ -4,11 +4,13 @@ import CompletedList from "../organisms/CompletedList";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import TodoItem from "../molecules/ToDoItem";
+import "../styles/ToDoTemplate.css";
 
 export default function ToDoTemplate({
   newToDo,
   setNewToDo,
   addToDo,
+  handleKeyPress,
   toDoItems,
   onUpdate,
   onDelete,
@@ -17,7 +19,11 @@ export default function ToDoTemplate({
   return (
     <div>
       <div>
-        <Input value={newToDo} onChange={(e) => setNewToDo(e.target.value)} />
+        <Input
+          value={newToDo}
+          onChange={(e) => setNewToDo(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
         <Button onClick={addToDo}>Add</Button>
       </div>
       <ToDoList

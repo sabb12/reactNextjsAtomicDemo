@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Checkbox from "../atoms/Checkbox";
+import "../styles/ToDoItem.css";
 
 export default function TodoItem({
   id,
@@ -16,7 +17,7 @@ export default function TodoItem({
 
   return (
     <div>
-      <Checkbox checked={completed} onChange={() => ontoggle(id)} />
+      <Checkbox checked={completed} onChange={() => onToggle(id)} />
       {isEditing ? (
         <Input value={editText} onChange={(e) => setEditText(e.target.value)} />
       ) : (

@@ -1,7 +1,9 @@
-import "./App.css";
+import React from "react";
+import ToDoPage from "./pages/ToDoPage";
+import "./styles/App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return <ToDoPage />;
 }
 
 export default App;

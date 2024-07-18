@@ -1,10 +1,12 @@
+// molecules/ToDoItem.jsx
 import React, { useState } from "react";
+import "../styles/ToDoItem.css";
+
 import Button from "../atoms/Button";
 import Input from "../atoms/Input";
 import Checkbox from "../atoms/Checkbox";
-import "../styles/ToDoItem.css";
 
-export default function TodoItem({
+export default function ToDoItem({
   id,
   text,
   completed,

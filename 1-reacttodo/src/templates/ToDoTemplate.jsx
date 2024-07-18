@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/ToDoTemplate.css";
+
 import ToDoList from "../organisms/ToDoList";
 import CompletedList from "../organisms/CompletedList";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import TodoItem from "../molecules/ToDoItem";
-import "../styles/ToDoTemplate.css";
 
 export default function ToDoTemplate({
   newToDo,
@@ -40,3 +41,4 @@ export default function ToDoTemplate({
     </div>
   );
 }
+

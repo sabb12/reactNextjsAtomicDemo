@@ -1,6 +1,7 @@
 import React from "react";
-import ToDoItem from "../molecules/ToDoItem";
 import "../styles/ToDoList.css";
+
+import ToDoItem from "../molecules/ToDoItem";
 
 export default function ToDoList({ items, onUpdate, onDelete, onToggle }) {
   return (

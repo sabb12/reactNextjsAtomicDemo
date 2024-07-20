@@ -19,7 +19,7 @@ export default function ToDoTemplate({
 }) {
   return (
     <div>
-      <div>
+      <div className="todoTemplateContainer">
         <Input
           value={newToDo}
           onChange={(e) => setNewToDo(e.target.value)}
@@ -41,4 +41,3 @@ export default function ToDoTemplate({
     </div>
   );
 }
-

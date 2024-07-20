@@ -1,3 +1,18 @@
+.todoTemplateContainer {
+  display: flex;
+  align-items: center;
+}
+
+.todoTemplateContainer Button {
+  background-color: #ffd814;
+  height: 40px;
+  width: 50px;
+}
+
+.todoTemplateContainer Button:hover {
+  background-color: #ffd814;
+}
+
 .todo-template {
   display: flex;
   flex-direction: column;

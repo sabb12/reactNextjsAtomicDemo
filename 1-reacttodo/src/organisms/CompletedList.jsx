@@ -7,7 +7,7 @@ import ToDoItem from "../molecules/ToDoItem";
 export default function CompletedList({ items, onDelete, onToggle }) {
   return (
     <div>
-      Completed Tasks
+      완료 한일
       {items
         .filter((item) => item.completed)
         .map((item) => (

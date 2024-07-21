@@ -10,7 +10,8 @@
   margin-bottom: 10px;
 }
 
-.todoList {
+.todoList,
+.completedList {
   border: 1px solid #ccc;
   background-color: white;
   height: 150px;
